@@ -6,13 +6,17 @@ templateCode="$1"
 
 filename="$2"
 
+scriptPath=$(dirname "$(readlink -f "$0")")
+
 #templatesPath="templates"
 
 declare -A templates_array=(["d"]="dll" ["l"]="lesson" ["h"]="holiday" ["e"]="exam" ["q"]="quiz" ["n"]="noclasses")
 
 if [ "$templateCode" == "d" ]; then
-mkdir $filename
+mkdir -p $filename
 cd $filename
 fi
 
-cp ${templates_array["$templateCode"]}-template.tex ./$filename.tex
+#cp ${templates_array["$templateCode"]}-template.tex ./$filename.tex
+
+echo $scriptPath

@@ -1,0 +1,245 @@
+\usepackage[a4paper, landscape, right=0.3in, left=0.3in, top=0.9in, bottom=0.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{iexec}
+\usepackage{pgffor}
+
+\def \areaLevel{Mathematics 8}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}} %for tabular left 
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} %for tabular centered
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}} %for tabular right 
+
+\newcommand{\theHeader}{\vspace*{-6mm}
+\begin{center}
+\tiny
+\textbf{Republic of the Philippines\\
+Department of Education\\
+National Capital Region \\
+SCHOOLS DIVISION OFFICE QUEZON CITY \\
+SAUYO HIGH SCHOOL}\\
+Pantabangan St., NIA Village, Sauyo, Quezon City\\
+\end{center}
+}
+
+\fancypagestyle{default}{
+\fancyhf{}
+\fancyhead[C]{\theHeader}
+%\fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% A footer rule
+}
+
+\pagestyle{default}% Default page style
+
+\newcommand{\theTitle}{\begin{center}
+% \vspace*{5mm}
+\textbf{DAILY LESSON LOG\\
+ S.Y. 2025--2026}\\
+\vspace*{3mm}
+Date:   \textbf{\underline{\dates}}  \quad  Quarter: \textbf{\underline{\quarter}} \quad  Week:  \textbf{\underline{\week}} 
+\end{center}
+
+\noindent\textbf{LEARNING AREA/LEVEL: \underline{\areaLevel} \hfill Teacher: \underline{\teacher}}
+}
+
+\newcommand{\tableOne}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{ |L{120pt} *{5}{|C{120pt}}|  }
+    \hline
+    \textbf{I. OBJECTIVES:} & \textbf{DAY 1} & \textbf{DAY 2} & \textbf{DAY 3} & \textbf{DAY 4} & \textbf{DAY 5} \\
+ \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\tableTwo}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{ |L{120pt} |L{649.5pt}|  }
+    \hline
+    A.  Content Standards & The learners demonstrate knowledge and understanding of: \contentStandards \\
+    \hline
+    B.  Performance  
+    Standards & By the end of the quarter, the learners are able to: \performanceStandards \\
+    \hline
+    C.  Teaching Philosophy & To achieve the goals of these lessons, the best teaching philosophies to utilize are constructivism and progressivism. \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\prepInputFiles}{\iexec[quiet]{bash /home/jonathan/Documents/others/android-scripts/termux/bash-scripts/prep-lesson-inputs.sh \firstLessonPath}}
+
+\newcommand{\cutHandout}[5]{\iexec[quiet]{bash /home/jonathan/Documents/others/android-scripts/termux/bash-scripts/cut-handout.sh #1 #2 #3 #4 #5}}
+
+\newcommand{\getTitle}[1]{\iexec{bash /home/jonathan/Documents/others/android-scripts/termux/bash-scripts/get-title.sh #1}\unskip}
+
+\newcommand{\getPrevNextTitle}[2]{\iexec{bash /storage/emulated/0/Android/media/Documents/others/android-scripts/termux/bash-scripts/get-prev-next-lessons.sh #1 #2}\unskip}
+
+\newcommand{\weekToDates}[2]{\iexec{bash /storage/emulated/0/Android/media/Documents/others/android-scripts/termux/bash-scripts/week2dates.sh #1 #2}\unskip}
+
+\newcommand{\inputLessonFiles}{\input{./inputs/day1}
+\input{./inputs/day2}
+\input{./inputs/day3}
+\input{./inputs/day4}
+\input{./inputs/day5}}
+
+\newcommand{\tableThree}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{*{6}{|L{120pt}}|}
+    \hline
+   D.  Learning Competencies & \learningCompetenciesOne & \learningCompetenciesTwo & \learningCompetenciesThree & \learningCompetenciesFour & \learningCompetenciesFive \\
+    \hline
+        Learning Objectives:  & \learningObjectivesOne & \learningObjectivesTwo & \learningObjectivesThree & \learningObjectivesFour & \learningObjectivesFive \\
+    \hline
+        \textbf{II.  CONTENT} & \lessonTitleOne & \lessonTitleTwo & \lessonTitleThree & \lessonTitleFour & \lessonTitleFive \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\tableFour}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{ |L{120pt} |L{649.5pt}|  }
+    \hline
+    \textbf{III.  LEARNING RESOURCES} & List the materials to be used in different days. Varied resources of materials sustain children’s interest in learning the lesson. Ensure that there is a mix of concrete and manipulative materials as well as paper-based materials. Hands-on learning promotes concept development. \\
+    \hline
+    \textbf{References} & \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\tableFive}[0]{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{*{6}{|L{120pt}}|}
+    \hline
+   A. 1. Teacher’s Guide & Printed Materials & Printed Materials & Printed Materials & Printed Materials & Printed Materials \\
+    \hline
+    \phantom{A.} 2. Learner’s Material  & Worksheets & Worksheets & Worksheets & Worksheets & Worksheets \\
+    \hline
+    \phantom{A.} 3. Textbook  & Worksheets & Worksheets & Worksheets & Worksheets & Worksheets \\
+    \hline
+    B.  Other Learning Resources & Teacher-made exercises & Teacher-made exercises & Teacher-made exercises & Teacher-made exercises & Teacher-made exercises \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\tableSix}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{ |L{120pt} |L{649.5pt}|  }
+    \hline
+    \textbf{IV. PROCEDURES} & \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\tableSeven}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{*{6}{|L{120pt}}|}
+    \hline
+   A. \begin{minipage}[t]{0.85\linewidth}
+\textcolor{red}{Reviewing}   Previous Lesson or Presenting New Lesson
+\end{minipage} & \reviewOne & \reviewTwo & \reviewThree & \reviewFour & \reviewFive \\[2.5em]
+    \hline
+    B. \begin{minipage}[t]{0.85\linewidth}
+\textcolor{red}{Motivation} \end{minipage} & \motivationOne & \motivationTwo & \motivationThree & \motivationFour & \motivationFive \\
+    \hline
+    C. \begin{minipage}[t]{0.85\linewidth}
+      \textcolor{red}{Development of the Lesson:} Presenting Examples/Instances of the Lesson \end{minipage} & \presentingExamplesOne & \presentingExamplesTwo & \presentingExamplesThree & \presentingExamplesFour & \presentingExamplesFive \\[4em]
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}
+}
+
+\newcommand{\tableEight}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{*{6}{|L{120pt}}|}
+ \hline
+    \phantom{C.} \begin{minipage}[t]{0.85\linewidth}
+ Developing Mastery \end{minipage} & \developingMasteryOne & \developingMasteryTwo & \developingMasteryThree & \developingMasteryFour & \developingMasteryFive \\
+    \hline
+    D. \begin{minipage}[t]{0.85\linewidth}
+      \textcolor{red}{Application} (Group or Individual Activity)\end{minipage} & \applicationOne & \applicationTwo & \applicationThree & \applicationFour & \applicationFive \\
+       \hline
+    E. \begin{minipage}[t]{0.85\linewidth}
+      \textcolor{red}{Wrap up} \end{minipage}
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep, label = \color{black}\arabic*. ]
+    \item Generalization
+    \item Giving of instructions on students’ assigned tasks
+    \end{enumerate}
+    & \assignedTaskOne  & \assignedTaskTwo & \assignedTaskThree & \assignedTaskFour & \assignedTaskFive \\      
+    \hline  
+ \end{tabular}
+\end{center}
+\end{minipage}
+}
+
+\newcommand{\tableNine}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{*{6}{|L{120pt}}|}
+    \hline
+    F. \begin{minipage}[t]{0.85\linewidth}
+\textcolor{red}{Evaluation} \end{minipage} & \evaluationOne & \evaluationTwo & \evaluationThree & \evaluationFour & \evaluationFive \\
+    \hline
+  H. \begin{minipage}[t]{0.85\linewidth}
+\textcolor{red}{Reinforcement or Remediation Activity } \end{minipage} & \reinforcementOne & \reinforcementTwo & \reinforcementThree & \reinforcementFour & \reinforcementFive \\
+  \hline
+VI. \textbf{REMARK/ANNOTATION} (Write a remark 
+every day whether the objectives have been attained or not). & Objectives have been
+Attained:\underline{\hspace*{20mm}} Not attained due to \underline{\hspace*{36mm}} & Objectives have been
+Attained:\underline{\hspace*{20mm}} Not attained due to \underline{\hspace*{36mm}} & Objectives have been
+Attained:\underline{\hspace*{20mm}} Not attained due to \underline{\hspace*{36mm}} & Objectives have been
+Attained:\underline{\hspace*{20mm}} Not attained due to \underline{\hspace*{36mm}} & Objectives have been
+Attained:\underline{\hspace*{20mm}} Not attained due to \underline{\hspace*{36mm}} \\
+  \hline
+ \end{tabular}
+\end{center}
+\end{minipage}
+}
+
+\newcommand{\tableTen}{\noindent\begin{minipage}[c]{\textwidth}
+\begin{center}
+  \begin{tabular}{ |L{120pt} |L{649.5pt}|  }
+    \hline
+    REFLECTION of PREVIOUS WEEK’s LESSON & \reflection \\
+    \hline
+ \end{tabular}
+\end{center}
+\end{minipage}}
+
+\newcommand{\signatories}{\noindent\begin{minipage}[c]{0.24\textwidth}
+\begin{center}
+  Prepared by:\\
+  \vspace*{2em}
+  \textbf{\teacher\\
+  Teacher \position}
+\end{center}
+  \end{minipage}\begin{minipage}[c]{0.24\textwidth}
+\begin{center}
+  Checked by:\\
+  \vspace*{2em}
+  \textbf{LORETO R. DOMINGO, EdD\\
+  Master Teacher II, Math}
+\end{center}
+  \end{minipage}\begin{minipage}[c]{0.24\textwidth}
+\begin{center}
+  Noted by:\\
+  \vspace*{2em}
+  \textbf{CECILE N. SISON\\
+  Head Teacher III, Math}
+\end{center}
+  \end{minipage}\begin{minipage}[c]{0.24\textwidth}
+\begin{center}
+  \phantom{Prepared by:}\\
+  \vspace*{2em}
+  \textbf{MERYGEE L. JAVIER, PhD\\
+  Principal IV}
+\end{center}
+  \end{minipage}
+}

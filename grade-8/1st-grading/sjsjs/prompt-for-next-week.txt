@@ -1,0 +1,41 @@
+Here are the objectives and topics I covered last week.
+Monday:
+Learning Competencies: competency
+Learning Objectives: The learner should be able to:
+a. recognize the concept of
+b. write the
+c. participate actively in class discussion.
+Tuesday:
+Learning Competencies: competency
+Learning Objectives: The learner should be able to:
+a. recognize the concept of
+b. write the
+c. participate actively in class discussion.
+Wednesday:
+Learning Competencies: competency
+Learning Objectives: The learner should be able to:
+a. recognize the concept of
+b. write the
+c. participate actively in class discussion.
+Thursday:
+Learning Competencies: competency
+Learning Objectives: The learner should be able to:
+a. recognize the concept of
+b. write the
+c. participate actively in class discussion.
+Friday:
+Learning Competencies: competency
+Learning Objectives: The learner should be able to:
+a. recognize the concept of
+b. write the
+c. participate actively in class discussion.
+Based on these, make 5-sentence reflections that I can include in the lesson plan for this week. Make 5 variations
+of the reflections, one for me and my co-teachers. Write each variation in the first person point of view. Format your
+output as LaTeX variables like this:
+\def \reflectionBacolod{variation 1}
+\def \reflectionMangahas{variation 2}
+\def \reflectionSaing{variation 3}
+\def \reflectionBarrientos{variation 4}
+\def \reflectionBañezta{variation 5}
+
+

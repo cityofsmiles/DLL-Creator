@@ -4,7 +4,7 @@ cmd="$1"
 
 case $cmd in
 setup)
-  setup-dll.sh "$2" "$3";;
+  bash setup-dll.sh "$2" "$3";;
 pattern-2)
   commands;;
 pattern-3)

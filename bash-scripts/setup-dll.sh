@@ -6,7 +6,9 @@ templateCode="$1"
 
 filename="$2"
 
-scriptPath=$(dirname "$(readlink -f "$0")")
+scriptPath=$(realpath "$0" | sed 's|\(.*\)/.*|\1|')
+
+#$(dirname "$(readlink -f "$0")")
 
 #templatesPath="templates"
 

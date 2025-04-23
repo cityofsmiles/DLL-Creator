@@ -10,7 +10,7 @@ filename="$2"
 
 #$(dirname "$(readlink -f "$0")")
 
-#templatesPath="templates"
+templatesPath="../templates"
 
 declare -A templates_array=(["d"]="dll" ["l"]="lesson" ["h"]="holiday" ["e"]="exam" ["q"]="quiz" ["n"]="noclasses")
 
@@ -19,6 +19,6 @@ mkdir -p $filename
 cd $filename
 fi
 
-#cp ${templates_array["$templateCode"]}-template.tex ./$filename.tex
+cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
 
-echo "scriptPath"
+#echo "scriptPath"

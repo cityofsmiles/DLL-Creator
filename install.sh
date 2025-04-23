@@ -5,6 +5,6 @@ baseDir="$(pwd)"
 echo "export PATH=$baseDir:$PATH" >> ~/.bashrc
 source ~/.bashrc
 
-cp $baseDir/bash-scripts/dll-creator.sh /usr/local/sbin/dll
+cp $baseDir/bash-scripts/dll-creator.sh /usr/local/bin/dll
 
-chmod +x /usr/local/sbin/dll
+chmod +x /usr/local/bin/dll

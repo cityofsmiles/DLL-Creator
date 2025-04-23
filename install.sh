@@ -2,7 +2,12 @@
 
 baseDir="$(pwd)"
 
-echo "export PATH=$baseDir:$PATH" >> ~/.bashrc
+scriptsDir="$baseDir/bash-scripts"
+
+templatesDir="$baseDir/templates"
+
+echo "export PATH=$scriptsDir:$templatesDir:$baseDir:$PATH" >> ~/.bashrc
+
 source ~/.bashrc
 
 cp $baseDir/bash-scripts/dll-creator.sh /usr/local/bin/dll

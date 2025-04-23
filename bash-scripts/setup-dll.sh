@@ -21,4 +21,4 @@ fi
 
 #cp ${templates_array["$templateCode"]}-template.tex ./$filename.tex
 
-echo $scriptPath
+echo "scriptPath"

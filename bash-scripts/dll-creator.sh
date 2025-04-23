@@ -2,7 +2,7 @@
 
 cmd="$1"
 
-scriptPath=$(realpath "$0" | sed 's|\(.*\)/.*|\1|')
+#scriptPath=$(realpath "$0" | sed 's|\(.*\)/.*|\1|')
 
 case $cmd in
 setup)

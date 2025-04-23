@@ -6,7 +6,9 @@ templateCode="$1"
 
 filename="$2"
 
+scriptPath=$(realpath "$0")
 
+scriptDir=$(dirname "$scriptPath")
 
 #$(dirname "$(readlink -f "$0")")
 
@@ -19,6 +21,6 @@ mkdir -p $filename
 cd $filename
 fi
 
-cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
+#cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
 
-#echo "scriptPath"
+echo "$scriptPath"

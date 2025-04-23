@@ -1,0 +1,22 @@
+% convert -density 900 tarp-linear-inequalities-in-two-variables.pdf -crop 2552x3898 -quality 100 -verbose tarp-linear-inequalities-in-two-variables%02d.jpg && convert -border 100x100 -bordercolor white *.jpg -resize 1240x1750  -compose Copy -gravity center -units PixelsPerInch -density 900 -verbose tarpapel-linear-inequalities-in-two-variables.pdf && rm *.jpg
+ 
+  
+\input{/home/jonathan/Documents/2022-2023/latex/lessons/tarpapel-preamble-2022.tex}
+ 
+\begin{document}
+\boldmath
+
+{\fontsize{24}{27}\fontfamily{pnc}\selectfont{
+ 
+\input{vs-linear-inequalities-in-two-variables-input}
+
+\vspace*{2ex}
+
+\input{ps-linear-inequalities-in-two-variables-input1}
+}}
+\newpage
+{\fontsize{31}{39}\fontfamily{pnc}\selectfont{
+\input{ps-linear-inequalities-in-two-variables-input2}
+
+}}
+\end{document}

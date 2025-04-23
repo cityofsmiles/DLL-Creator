@@ -1,0 +1,56 @@
+\begin{center}
+
+\begin{tikzpicture}[%scale=3.5,
+scale=\figOneScale, place/.style={circle, fill=black, inner sep=0pt, outer sep=0pt, minimum size=3pt}, 
+point-label/.style={fill=white, circle, inner sep=0pt}
+]
+
+\begin{axis}[
+    xmin=-11,xmax=11,
+    ymin=-11,ymax=11,
+    grid=both,
+    axis lines=middle,
+    minor tick num=4,
+    enlargelimits={abs=0.5},
+    axis line style={latex-latex},
+    ticklabel style={font=\tiny,fill=white, inner sep=0pt},
+    xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+]
+
+\coordinate (O) at (0,0);
+\node[fill=white,circle,inner sep=0pt] (O-label) at ($(O)+(135:10pt)$) {\normalsize $O$};
+
+\node (A) at (1,6) [place] {}; 
+\node[point-label] (A-label) at ($(A)+(115:7pt)$) {\normalsize $A$};
+
+\node (B) at (-4,2) [place] {}; 
+\node[point-label] (B-label) at ($(B)+(115:7pt)$) {\normalsize $B$};
+
+\node (C) at (-2,-1) [place] {}; 
+\node[point-label] (C-label) at ($(C)+(-135:7pt)$) {\normalsize $C$};
+
+\node (D) at (4,0) [place] {}; 
+\node[point-label] (D-label) at ($(D)+(115:7pt)$) {\normalsize $D$};
+
+\node (E) at (4,-4) [place] {}; 
+\node[point-label] (E-label) at ($(E)+(115:7pt)$) {\normalsize $E$};
+
+\node (F) at (0,4) [place] {}; 
+\node[point-label] (F-label) at ($(F)+(15:7pt)$) {\normalsize $F$};
+
+\node (G) at (-5,0) [place] {}; 
+\node[point-label] (G-label) at ($(G)+(115:7pt)$) {\normalsize $G$};
+
+\node (H) at (-5,-4) [place] {}; 
+\node[point-label] (H-label) at ($(H)+(115:7pt)$) {\normalsize $H$};
+
+\node (I) at (0,-6) [place] {}; 
+\node[point-label] (I-label) at ($(I)+(0:7pt)$) {\normalsize $I$};
+
+\end{axis}
+
+ 
+
+\end{tikzpicture}
+\end{center} 

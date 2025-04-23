@@ -6,7 +6,7 @@ templateCode="$1"
 
 filename="$2"
 
-templatesPath="templates"
+#templatesPath="templates"
 
 declare -A templates_array=(["d"]="dll" ["l"]="lesson" ["h"]="holiday" ["e"]="exam" ["q"]="quiz" ["n"]="noclasses")
 
@@ -15,4 +15,4 @@ mkdir $filename
 cd $filename
 fi
 
-cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
+cp ${templates_array["$templateCode"]}-template.tex ./$filename.tex

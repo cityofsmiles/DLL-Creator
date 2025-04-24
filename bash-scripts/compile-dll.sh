@@ -1,7 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# bash /home/jonathan/Documents/others/android-scripts/termux/bash-scripts/compile-dll.sh 
-
 dllFile="*.tex"
 
 dllName="$(basename -- $dllFile .tex)"

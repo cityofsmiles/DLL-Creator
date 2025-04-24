@@ -7,8 +7,10 @@ source ~/.dll-creator
 case $cmd in
 setup)
   bash $scriptsDir/setup-dll.sh "$2" "$3";;
-pattern-2)
-  commands;;
+  
+compile)
+  bash $scriptsDir/compile-dll.sh;;
+  
 pattern-3)
   commands;;
 pattern-N)

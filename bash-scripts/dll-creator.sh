@@ -11,10 +11,6 @@ setup)
 compile)
   bash $scriptsDir/compile-dll.sh;;
   
-pattern-3)
-  commands;;
-pattern-N)
-  commands;;
 *)
-  commands;;
+  echo 'Invalid command.';;
 esac

@@ -1,0 +1,104 @@
+%%\documentclass[letterpaper]{article}
+
+\usepackage{amsmath}
+\usepackage{pgfpages}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\usepackage{stackengine} %to define \pesos 
+\usepackage{tabularx} 
+\usepackage{fontspec}
+
+\setmainfont[Ligatures=TeX, Extension=.TTF, UprightFont= *, BoldFont=*bd, ItalicFont=*i, BoldItalicFont=*bi]{Times}
+
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X} %for tabularx
+
+\newcolumntype{A}[1]{>{\raggedright\arraybackslash}p{#1}} %for longtable LEFT
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} %for longtable CENTER
+
+\newcolumntype{B}[1]{>{\raggedleft\arraybackslash}p{#1}} %for longtable RIGHT 
+ 
+\renewcommand{\tabularxcolumn}[1]{>{\small}m{#1}}
+
+\newcolumntype{G}{>{$}l<{$}} % math-mode version of "l" column type
+
+\setlist{nolistsep,leftmargin=*} %reduce margin in lists
+\pagestyle{empty}
+\thispagestyle{empty}
+\setlength{\multicolsep}{3.0pt plus 1.0pt minus 0.75pt} %reduce space before and after multicol
+ 
+\makeatletter
+\@tempcnta=1\relax
+\loop\ifnum\@tempcnta<9\relax
+\pgf@pset{\the\@tempcnta}{bordercode}{\pgfusepath{stroke}}
+\advance\@tempcnta by 1\relax
+\repeat
+\makeatother
+
+\def\watermark{\fontsize{3}{5}\selectfont \TeX M$\kern-0.1em\alpha\kern-0.15em\tau$\kern-0.1em\raise 0.45ex\hbox{h}Pro: Math Teaching Beautified}
+
+\def\author{\fontsize{3}{5}\selectfont Created by Jonathan R. Bacolod using \LaTeX }
+
+\def\email{\fontsize{3}{5}\selectfont texmathpro@gmail.com}
+  
+\newcommand{\insertwatermark}{
+\begin{textblock}{1}(-0.15,0.1)
+\rotatebox{90}{\watermark}
+\end{textblock}
+
+\begin{textblock}{1}(-0.15,2)
+\rotatebox{90}{\author}
+%\rotatebox{90}{\watermark}
+\end{textblock}
+
+%\begin{textblock}{1}(-0.15,4)
+%\rotatebox{90}{\watermark}
+%\end{textblock}
+
+\begin{textblock}{1}(-0.15,6)
+\rotatebox{90}{\email}
+%\rotatebox{90}{\watermark}
+\end{textblock}
+
+\begin{textblock}{1}(15.15,0.1)
+\rotatebox{-90}{\watermark}
+\end{textblock}
+
+\begin{textblock}{1}(15.15,2)
+\rotatebox{-90}{\author}
+\end{textblock}
+
+%\begin{textblock}{1}(15.15,4)
+%\rotatebox{-90}{\author}
+%\end{textblock}
+
+\begin{textblock}{1}(15.15,6)
+\rotatebox{-90}{\email}
+\end{textblock}
+}
+
+  
+\newcommand \redcheck {{\color{red}\checkmark}}  
+
+\newcommand*{\thead}[2]{\parbox[c]{#1}{\centering\textbf{#2}}} % for headers of tabular
+\newcommand*{\tCellC}[2]{\parbox[c]{#1}{\centering #2}} % for center aligned cell of tabular
+\newcommand*{\tCellL}[2]{\parbox[c]{#1}{#2}} % for center aligned cell of tabular
+
+\newcommand\nextcolumn{\vfill\null
+\columnbreak}
+
+%\newcommand\pesos{\stackengine{-1.2ex}{P}{\stackengine{-1.2ex}{$-$}{$-$}{O}{c}{F}{F}{S}}{O}{c}{F}{T}{S}}
+
+\newcommand\midcenter[1]{\vspace*{-1.5ex}
+\begin{center}
+#1
+\end{center}
+\vspace*{-2ex} 
+}

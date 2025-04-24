@@ -69,15 +69,15 @@ Date:   \textbf{\underline{\dates}}  \quad  Quarter: \textbf{\underline{\quarter
 \end{center}
 \end{minipage}}
 
-\newcommand{\prepInputFiles}{\iexec[quiet]{bash ./bash-scripts/prep-lesson-inputs.sh \firstLessonPath}}
+\newcommand{\prepInputFiles}{\iexec[quiet]{bash ../../../bash-scripts/prep-lesson-inputs.sh \firstLessonPath}}
 
-\newcommand{\cutHandout}[5]{\iexec[quiet]{bash ./bash-scripts/cut-handout.sh #1 #2 #3 #4 #5}}
+\newcommand{\cutHandout}[5]{\iexec[quiet]{bash ../../../bash-scripts/cut-handout.sh #1 #2 #3 #4 #5}}
 
-\newcommand{\getTitle}[1]{\iexec{bash ./bash-scripts/get-title.sh #1}\unskip}
+\newcommand{\getTitle}[1]{\iexec{bash ../../../bash-scripts/get-title.sh #1}\unskip}
 
-\newcommand{\getPrevNextTitle}[2]{\iexec{bash ./bash-scripts/get-prev-next-lessons.sh #1 #2}\unskip}
+\newcommand{\getPrevNextTitle}[2]{\iexec{bash ../../../bash-scripts/get-prev-next-lessons.sh #1 #2}\unskip}
 
-\newcommand{\weekToDates}[2]{\iexec{bash ./bash-scripts/week2dates.sh #1 #2}\unskip}
+\newcommand{\weekToDates}[2]{\iexec{bash ../../../bash-scripts/week2dates.sh #1 #2}\unskip}
 
 \newcommand{\inputLessonFiles}{\input{./inputs/day1}
 \input{./inputs/day2}

@@ -16,10 +16,6 @@ echo "templatesDir=$templatesDir" >> ~/.dll-creator
 
 echo "handoutsDir=$handoutsDir" >> ~/.dll-creator
 
-#echo "export PATH=$scriptsDir:$templatesDir:$baseDir:$PATH" >> ~/.bashrc
-
-
-
 cp $baseDir/bash-scripts/dll-creator.sh /usr/local/bin/dll
 
 chmod +x /usr/local/bin/dll

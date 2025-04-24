@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# bash /storage/emulated/0/Android/media/Documents/others/android-scripts/termux/bash-scripts/get-prev-next-lessons.sh handoutPath code
+source ~/.dll-creator
 
 handoutPath="$1"
 

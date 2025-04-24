@@ -4,11 +4,13 @@
 
 shopt -s dotglob nullglob
 
+source ~/.dll-creator
+
 handoutsPath="$1"
 
 lessonsPath="$2"
 
-lessonTemplateFile="/storage/emulated/0/Android/media/Documents/others/business/dll/templates/lesson-template.tex"
+lessonTemplateFile="$templatesDir/lesson-template.tex"
 
 for i in $handoutsPath/*/ ;
 do

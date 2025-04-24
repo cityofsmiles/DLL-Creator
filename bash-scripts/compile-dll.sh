@@ -6,6 +6,8 @@ dllFile="*.tex"
 
 dllName="$(basename -- $dllFile .tex)"
 
+source ~/.dll-creator
+
 teacherNames=("JONATHAN R. BACOLOD" "JERIC T. SAING" "JUANITO MANGAHAS" "XAVIER BAÑEZTA" "GRACE BARRIENTOS")
 
 teacherSurnames=("Bacolod" "Saing" "Mangahas" "Bañezta" "Barrientos")
@@ -23,7 +25,7 @@ done
 
 rm *.aux *.log *.txt
 
-bash /storage/emulated/0/Android/media/Documents/others/android-scripts/termux/bash-scripts/create-dll-prompt.sh
+bash $scriptsDir/create-dll-prompt.sh
 
 rm -rf ./inputs
 

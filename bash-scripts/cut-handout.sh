@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# bash /home/jonathan/Documents/others/android-scripts/termux/bash-scripts/cut-handout.sh path day height height height
+source ~/.dll-creator
 
 handoutDir="$1"
 
@@ -12,7 +12,7 @@ exercisesMinipageHeight="$4"
 
 activityMinipageHeight="$5"
 
-cutHandoutTemplateFile="/home/jonathan/Documents/others/business/dll/templates/cut-handout-template.tex"
+cutHandoutTemplateFile="$templatesDir/cut-handout-template.tex"
 
 dllDir="$(pwd)"
 

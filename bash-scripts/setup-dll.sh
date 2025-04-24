@@ -8,14 +8,6 @@ filename="$2"
 
 source ~/.dll-creator
 
-#scriptPath=$(realpath "$0")
-
-#scriptDir=$(dirname "$scriptPath")
-
-#$(dirname "$(readlink -f "$0")")
-
-#templatesPath="../templates"
-
 declare -A templates_array=(["d"]="dll" ["l"]="lesson" ["h"]="holiday" ["e"]="exam" ["q"]="quiz" ["n"]="noclasses")
 
 if [ "$templateCode" == "d" ]; then
@@ -23,6 +15,5 @@ mkdir -p $filename
 cd $filename
 fi
 
-#cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
+cp $templatesDir/${templates_array["$templateCode"]}-template.tex ./$filename.tex
 
-echo "scriptPath"

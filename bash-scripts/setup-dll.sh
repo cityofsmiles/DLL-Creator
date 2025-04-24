@@ -6,13 +6,15 @@ templateCode="$1"
 
 filename="$2"
 
-scriptPath=$(realpath "$0")
+source ~/.dll-creator
 
-scriptDir=$(dirname "$scriptPath")
+#scriptPath=$(realpath "$0")
+
+#scriptDir=$(dirname "$scriptPath")
 
 #$(dirname "$(readlink -f "$0")")
 
-templatesPath="../templates"
+#templatesPath="../templates"
 
 declare -A templates_array=(["d"]="dll" ["l"]="lesson" ["h"]="holiday" ["e"]="exam" ["q"]="quiz" ["n"]="noclasses")
 
@@ -23,4 +25,4 @@ fi
 
 #cp $templatesPath/${templates_array["$templateCode"]}-template.tex ./$filename.tex
 
-echo "$scriptPath"
+echo "scriptPath"

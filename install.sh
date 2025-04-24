@@ -6,9 +6,19 @@ scriptsDir="$baseDir/bash-scripts"
 
 templatesDir="$baseDir/templates"
 
-echo "export PATH=$scriptsDir:$templatesDir:$baseDir:$PATH" >> ~/.bashrc
+handoutsDir="$baseDir/handouts"
 
-source ~/.bashrc
+echo "baseDir=$baseDir" > ~/.dll-creator
+
+echo "scriptsDir=$scriptsDir" >> ~/.dll-creator
+
+echo "templatesDir=$templatesDir" >> ~/.dll-creator
+
+echo "handoutsDir=$handoutsDir" >> ~/.dll-creator
+
+#echo "export PATH=$scriptsDir:$templatesDir:$baseDir:$PATH" >> ~/.bashrc
+
+
 
 cp $baseDir/bash-scripts/dll-creator.sh /usr/local/bin/dll
 

@@ -2,11 +2,11 @@
 
 cmd="$1"
 
-#scriptPath=$(realpath "$0" | sed 's|\(.*\)/.*|\1|')
+source ~/.dll-creator
 
 case $cmd in
 setup)
-  bash setup-dll.sh "$2" "$3";;
+  bash $scriptsDir/setup-dll.sh "$2" "$3";;
 pattern-2)
   commands;;
 pattern-3)

@@ -1,0 +1,22 @@
+# Fdb version 4
+["dvips"] 0 "sol-translating-variation-statements-from-mathematical-equations-input1.dvi" "sol-translating-variation-statements-from-mathematical-equations-input1.ps" "sol-translating-variation-statements-from-mathematical-equations-input1" 0 -1
+  "sol-translating-variation-statements-from-mathematical-equations-input1.dvi" 0 -1 0 "latex"
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations-input1.ps"
+  (rewritten before read)
+["latex"] 1726884662.54498 "sol-translating-variation-statements-from-mathematical-equations-input1.tex" "sol-translating-variation-statements-from-mathematical-equations-input1.dvi" "sol-translating-variation-statements-from-mathematical-equations-input1" 1726884662.859 2
+  "/opt/texlive/2024/texmf-dist/web2c/texmf.cnf" 1724678738 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
+  "/opt/texlive/2024/texmf-var/web2c/pdftex/latex.fmt" 1724678738 8239765 7fa7152d6f805379ae2d6a65134a912b ""
+  "/opt/texlive/2024/texmf.cnf" 1724678738 585 d89e4959d6ce47100a8277b236c781f4 ""
+  "sol-translating-variation-statements-from-mathematical-equations-input1.aux" 1726884662.54 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "sol-translating-variation-statements-from-mathematical-equations-input1.tex" 1726724003.5199 159 23bd793afa0c3390a51b7a982e9089ad ""
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations-input1.aux"
+  "sol-translating-variation-statements-from-mathematical-equations-input1.dvi"
+  "sol-translating-variation-statements-from-mathematical-equations-input1.log"
+  (rewritten before read)
+["ps2pdf"] 0 "sol-translating-variation-statements-from-mathematical-equations-input1.ps" "sol-translating-variation-statements-from-mathematical-equations-input1.pdf" "sol-translating-variation-statements-from-mathematical-equations-input1" 0 -1
+  "sol-translating-variation-statements-from-mathematical-equations-input1.ps" 0 -1 0 "dvips"
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations-input1.pdf"
+  (rewritten before read)

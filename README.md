@@ -1,7 +1,7 @@
 # DLL-Creator
 Daily Lesson Plan Creator for high school Math teachers 
 
-Automatically create DLL using Termux and LaTeX! 
+Automatically create DLL using Termux and LaTeX! For Grade 7 to 10 only.
 
 ## Installation
 1. Install [Termux](https://f-droid.org/packages/com.termux/).

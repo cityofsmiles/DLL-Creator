@@ -1,0 +1,94 @@
+%\vspace{1ex}
+\vspace{.3ex}
+\noindent\textbf{Practice Exercises 3.04}
+
+%\vspace{0.75ex}
+\vspace{.2ex}
+
+Use the information provided in each graph to answer the questions below.
+
+\begin{enumerate}[label=\color{blue}\arabic*.]
+    \item \textbf{Bar Graph Interpretation} \\
+    A bar graph shows the number of pets owned by students in one class:
+
+\begin{minipage}[c]{0.21\textwidth}
+<<bar-graph, cache=FALSE,echo=F>>=
+read_chunk('./graphs/bar-graph.R')
+
+@
+<<bar-graph,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.24\textwidth}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Which student owns the most pets?
+        \item How many pets do Emily and Henry own in total?
+        \item What is the difference in pets owned between Frank and Grace?
+    \end{enumerate}
+
+\end{minipage}
+
+    \item \textbf{Pie Chart Interpretation} \\
+    A pie chart shows how students prefer to travel to school:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<pie-chart, cache=FALSE,echo=F>>=
+read_chunk('./graphs/pie-chart.R')
+
+@
+<<pie-chart,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.24\textwidth}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Which mode of travel is the most preferred?
+        \item What percentage of students prefer to travel by bus or carpool?
+        \item If there are 80 students surveyed, how many prefer to walk to school?
+    \end{enumerate}
+
+  \end{minipage}
+  
+    \item \textbf{Line Graph Interpretation} \\
+    A line graph shows the sales of a lemonade stand over a week:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<line-graph, cache=FALSE,echo=F>>=
+read_chunk('./graphs/line-graph.R')
+
+@
+<<line-graph,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.24\textwidth}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Which day had the highest sales?
+        \item What was the sales difference between Tuesday and Thursday?
+        \item Was there an overall increase or decrease in sales over the week?
+    \end{enumerate}
+
+\end{minipage}    
+    \item \textbf{Histogram Interpretation} \\
+    A histogram shows the hours spent on homework by students in a week:
+
+\begin{minipage}[c]{0.21\textwidth}
+<<histogram, cache=FALSE,echo=F>>=
+read_chunk('./graphs/histogram.R')
+
+@
+<<histogram,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+    
+    \begin{enumerate}[label=(\alph*)]
+        \item Which range of hours has the most students?
+        \item How many students spend less than 6 hours on homework?
+        \item What is the total number of students surveyed?
+    \end{enumerate}
+
+\end{minipage}
+
+  \end{enumerate}

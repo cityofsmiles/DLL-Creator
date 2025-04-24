@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=\squareFigureScale]
+  \tkzDefPoints{0/0/A,3/0/B}
+\tkzDefSquare(A,B)  
+\tkzGetPoints{C}{D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegment(A,C)
+\tkzDrawSegment(B,D)
+\tkzInterLL(A,C)(B,D)
+\tkzGetPoint{O}
+\tkzDrawPoint(O)
+\tkzDrawPoints(A,...,D)
+\tkzLabelPoints(A,B)
+\tkzLabelPoints[above](C,D,O)
+\end{tikzpicture}

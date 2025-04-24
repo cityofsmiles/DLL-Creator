@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=\figureScale]
+\tkzDefPoints{0/0/M,3/0/A,3/2/T}
+\tkzDefParallelogram(M,A,T)
+% or \tkzDefPointWith[colinear= at T](A,M)
+\tkzGetPoint{H}
+\tkzDrawPolygon(M,A,T,H)
+\tkzLabelPoints(M,A)
+%\tkzDrawSegment(M,T)
+%\tkzDrawSegment(A,H)
+%\tkzInterLL(M,T)(A,H)
+%\tkzGetPoint{X}
+%\tkzDrawPoint(X)
+\tkzDrawPoints(M,A,T,H)
+\tkzLabelPoints[above](T,H)
+\end{tikzpicture}

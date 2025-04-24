@@ -1,0 +1,6 @@
+PWD /home/jonathan/Documents/others/business/handouts/grade-9/2nd-grading/2.6-translating-variation-statements-from-mathematical-equations
+INPUT /opt/texlive/2024/texmf.cnf
+INPUT /opt/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT /opt/texlive/2024/texmf-var/web2c/pdftex/latex.fmt
+INPUT ps-translating-variation-statements-from-mathematical-equations-input1.tex
+OUTPUT ps-translating-variation-statements-from-mathematical-equations-input1.log

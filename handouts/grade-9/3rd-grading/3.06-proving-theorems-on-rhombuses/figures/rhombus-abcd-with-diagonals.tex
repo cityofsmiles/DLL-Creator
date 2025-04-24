@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=\rhombusFigureScale]
+  \tkzDefPoints{0/0/A,3/0/B}
+  \tkzDefShiftPoint[B](75:3){C}
+\tkzDefParallelogram(A,B,C)
+\tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegment(A,C)
+\tkzDrawSegment(B,D)
+\tkzInterLL(A,C)(B,D)
+\tkzGetPoint{O}
+\tkzDrawPoint(O)
+\tkzDrawPoints(A,...,D)
+\tkzLabelPoints(A,B)
+\tkzLabelPoints[above](C,D,O)
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=\figureScale]
+\tkzDefPoints{0/0/A,3/0/B,3/2/C}
+\tkzDefParallelogram(A,B,C)
+% or \tkzDefPointWith[colinear= at C](B,A)
+\tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints(A,B)
+\tkzLabelPoints[above](C,D)
+\tkzDrawPoints(A,...,D)
+\end{tikzpicture}

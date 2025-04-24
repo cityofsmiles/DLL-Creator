@@ -1,0 +1,23 @@
+# Fdb version 4
+["dvips"] 0 "sol-translating-variation-statements-from-mathematical-equations.dvi" "sol-translating-variation-statements-from-mathematical-equations.ps" "sol-translating-variation-statements-from-mathematical-equations" 0 -1
+  "sol-translating-variation-statements-from-mathematical-equations.dvi" 0 -1 0 "latex"
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations.ps"
+  (rewritten before read)
+["latex"] 1726884662.86256 "sol-translating-variation-statements-from-mathematical-equations.tex" "sol-translating-variation-statements-from-mathematical-equations.dvi" "sol-translating-variation-statements-from-mathematical-equations" 1726884663.17604 2
+  "../../handout-preamble-2023.tex" 0 -1 0 ""
+  "/opt/texlive/2024/texmf-dist/web2c/texmf.cnf" 1724678738 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
+  "/opt/texlive/2024/texmf-var/web2c/pdftex/latex.fmt" 1724678738 8239765 7fa7152d6f805379ae2d6a65134a912b ""
+  "/opt/texlive/2024/texmf.cnf" 1724678738 585 d89e4959d6ce47100a8277b236c781f4 ""
+  "sol-translating-variation-statements-from-mathematical-equations.aux" 1726884662.86 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "sol-translating-variation-statements-from-mathematical-equations.tex" 1726724003.47324 899 e9708268462f788b0eeafda3fafda8f5 ""
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations.aux"
+  "sol-translating-variation-statements-from-mathematical-equations.dvi"
+  "sol-translating-variation-statements-from-mathematical-equations.log"
+  (rewritten before read)
+["ps2pdf"] 0 "sol-translating-variation-statements-from-mathematical-equations.ps" "sol-translating-variation-statements-from-mathematical-equations.pdf" "sol-translating-variation-statements-from-mathematical-equations" 0 -1
+  "sol-translating-variation-statements-from-mathematical-equations.ps" 0 -1 0 "dvips"
+  (generated)
+  "sol-translating-variation-statements-from-mathematical-equations.pdf"
+  (rewritten before read)

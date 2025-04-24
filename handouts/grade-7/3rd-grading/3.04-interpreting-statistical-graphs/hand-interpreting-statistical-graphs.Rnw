@@ -1,0 +1,24 @@
+\documentclass[letterpaper]{article}
+\usepackage{../../../handout-preamble-2023}
+\usepackage{../../../../common-preamble-2023}
+
+%\input{../../../handout-preamble-2023}
+%\input{../../../../common-preamble-2023}
+\usepackage[paperwidth=\paperwidth,paperheight=\paperheight, left=4.5mm, right=6mm, top=2mm, bottom=2mm]{geometry}
+%\pgfpagesuselayout{4 on 1}[letterpaper, border shrink=0mm]
+
+              
+\begin{document}
+\fontsize{8.1}{9.1}\selectfont
+
+\insertwatermark
+    
+\begin{multicols*}{2} 			
+\input{vs-interpreting-statistical-graphs-input}
+\Sexpr{knit_child('ps-interpreting-statistical-graphs-input1.Rnw')}
+%\input{ps-interpreting-statistical-graphs-input1}
+\Sexpr{knit_child('ps-interpreting-statistical-graphs-input2.Rnw')}
+%\input{ps-interpreting-statistical-graphs-input2}	
+\end{multicols*} 
+
+\end{document}

@@ -1,0 +1,22 @@
+# Fdb version 4
+["dvips"] 0 "ps-translating-variation-statements-from-mathematical-equations-input2.dvi" "ps-translating-variation-statements-from-mathematical-equations-input2.ps" "ps-translating-variation-statements-from-mathematical-equations-input2" 0 -1
+  "ps-translating-variation-statements-from-mathematical-equations-input2.dvi" 0 -1 0 "latex"
+  (generated)
+  "ps-translating-variation-statements-from-mathematical-equations-input2.ps"
+  (rewritten before read)
+["latex"] 1726884662.22818 "ps-translating-variation-statements-from-mathematical-equations-input2.tex" "ps-translating-variation-statements-from-mathematical-equations-input2.dvi" "ps-translating-variation-statements-from-mathematical-equations-input2" 1726884662.54053 2
+  "/opt/texlive/2024/texmf-dist/web2c/texmf.cnf" 1724678738 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
+  "/opt/texlive/2024/texmf-var/web2c/pdftex/latex.fmt" 1724678738 8239765 7fa7152d6f805379ae2d6a65134a912b ""
+  "/opt/texlive/2024/texmf.cnf" 1724678738 585 d89e4959d6ce47100a8277b236c781f4 ""
+  "ps-translating-variation-statements-from-mathematical-equations-input2.aux" 1726884662.22333 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "ps-translating-variation-statements-from-mathematical-equations-input2.tex" 1726854295.79927 715 1c5567703ea4cd9ad92d1ed30f85278f ""
+  (generated)
+  "ps-translating-variation-statements-from-mathematical-equations-input2.aux"
+  "ps-translating-variation-statements-from-mathematical-equations-input2.dvi"
+  "ps-translating-variation-statements-from-mathematical-equations-input2.log"
+  (rewritten before read)
+["ps2pdf"] 0 "ps-translating-variation-statements-from-mathematical-equations-input2.ps" "ps-translating-variation-statements-from-mathematical-equations-input2.pdf" "ps-translating-variation-statements-from-mathematical-equations-input2" 0 -1
+  "ps-translating-variation-statements-from-mathematical-equations-input2.ps" 0 -1 0 "dvips"
+  (generated)
+  "ps-translating-variation-statements-from-mathematical-equations-input2.pdf"
+  (rewritten before read)

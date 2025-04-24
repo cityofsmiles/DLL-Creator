@@ -1,0 +1,95 @@
+%\vspace{1ex}
+\vspace{.3ex}
+\noindent\textbf{Activity 3.04}
+
+%\vspace{0.75ex}
+\vspace{.2ex}
+
+Use the information provided in each graph to answer the questions below.
+
+\setlist{nolistsep}
+\begin{enumerate}[noitemsep, label = \color{blue}\arabic*. ]
+    \item \textbf{Bar Graph Interpretation} \\
+   A bar graph shows the number of books read by students in one month:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<bar-graph2, cache=FALSE,echo=F>>=
+read_chunk('./graphs/bar-graph2.R')
+
+@
+<<bar-graph2,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Which student read the most books?
+        \item How many books did Anna and Daniel read in total?
+        \item What is the difference in books read between Ben and Carol?
+    \end{enumerate}
+
+
+\end{minipage}
+
+    \item \textbf{Pie Chart Interpretation} \\
+    A pie chart shows how a group of students spend their free time:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<pie-chart2, cache=FALSE,echo=F>>=
+read_chunk('./graphs/pie-chart2.R')
+
+@
+<<pie-chart2,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Which activity takes up the most time?
+        \item What percentage of time is spent on activities other than sports?
+        \item If there are 100 students, how many spend time on "Other Activities"?
+    \end{enumerate}
+\end{minipage}
+    
+    \item \textbf{Line Graph Interpretation} \\
+    A line graph shows the temperature in degrees Celsius over one week in a town:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<line-graph2, cache=FALSE,echo=F>>=
+read_chunk('./graphs/line-graph2.R')
+
+@
+<<line-graph2,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+    \begin{enumerate}[label=(\alph*)]
+        \item Which day had the highest temperature?
+        \item What was the temperature difference between Tuesday and Friday?
+        \item Was there an overall increase or decrease in temperature over the week?
+    \end{enumerate}
+\end{minipage}
+
+    
+    \item \textbf{Histogram Interpretation} \\
+    A histogram shows the ages of participants in a community event:
+
+\begin{minipage}[c]{0.25\textwidth}
+<<histogram2, cache=FALSE,echo=F>>=
+read_chunk('./graphs/histogram2.R')
+
+@
+<<histogram2,echo=F>>=
+@
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+    \begin{enumerate}[label=(\alph*)]
+        \item Which age range has the most participants?
+        \item How many participants are younger than 20?
+        \item What is the total number of participants?
+    \end{enumerate}
+\end{minipage}
+
+
+\end{enumerate}
+

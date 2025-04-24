@@ -1,0 +1,22 @@
+# Fdb version 4
+["dvips"] 0 "vs-translating-variation-statements-from-mathematical-equations-input.dvi" "vs-translating-variation-statements-from-mathematical-equations-input.ps" "vs-translating-variation-statements-from-mathematical-equations-input" 0 -1
+  "vs-translating-variation-statements-from-mathematical-equations-input.dvi" 0 -1 0 "latex"
+  (generated)
+  "vs-translating-variation-statements-from-mathematical-equations-input.ps"
+  (rewritten before read)
+["latex"] 1726884663.19961 "vs-translating-variation-statements-from-mathematical-equations-input.tex" "vs-translating-variation-statements-from-mathematical-equations-input.dvi" "vs-translating-variation-statements-from-mathematical-equations-input" 1726884663.51279 2
+  "/opt/texlive/2024/texmf-dist/web2c/texmf.cnf" 1724678738 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
+  "/opt/texlive/2024/texmf-var/web2c/pdftex/latex.fmt" 1724678738 8239765 7fa7152d6f805379ae2d6a65134a912b ""
+  "/opt/texlive/2024/texmf.cnf" 1724678738 585 d89e4959d6ce47100a8277b236c781f4 ""
+  "vs-translating-variation-statements-from-mathematical-equations-input.aux" 1726884663.19666 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "vs-translating-variation-statements-from-mathematical-equations-input.tex" 1726855287.22255 1048 2a89fbd3e980107ef9ab506bf8fa29b3 ""
+  (generated)
+  "vs-translating-variation-statements-from-mathematical-equations-input.aux"
+  "vs-translating-variation-statements-from-mathematical-equations-input.dvi"
+  "vs-translating-variation-statements-from-mathematical-equations-input.log"
+  (rewritten before read)
+["ps2pdf"] 0 "vs-translating-variation-statements-from-mathematical-equations-input.ps" "vs-translating-variation-statements-from-mathematical-equations-input.pdf" "vs-translating-variation-statements-from-mathematical-equations-input" 0 -1
+  "vs-translating-variation-statements-from-mathematical-equations-input.ps" 0 -1 0 "dvips"
+  (generated)
+  "vs-translating-variation-statements-from-mathematical-equations-input.pdf"
+  (rewritten before read)

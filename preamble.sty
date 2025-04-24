@@ -1,0 +1,326 @@
+\usepackage{tabularx}
+\usepackage{bm} 
+\usepackage{siunitx} % celsius symbol
+\usepackage{xcolor}
+%\usepackage{bookman}
+\usepackage{ifthen}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{amsmath,amssymb,cancel}%,units
+\usepackage{gensymb}
+\usepackage{graphicx}
+%\usepackage{enumitem}
+%\usepackage{fancyhdr}
+\usepackage{systeme}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+\usepackage{pgfplots} 
+\pgfplotsset{compat=newest} 
+\usepackage{tkz-euclide}
+\usepackage{enumitem} %setlist nosep
+\usepackage{stackengine} %to define \pesos 
+\usepackage{anyfontsize} 
+%to define mathpzc 
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\newcommand{\oneemblank}{\underline{\hspace{1em}}} 
+
+\newcommand\pesos{\stackengine{-1.38ex}{P}{\stackengine{-1.2ex}{$-$}{$-$}{O}{c}{F}{F}{S}}{O}{c}{F}{T}{S}}
+
+\newcommand{\myaxis}{xticklabels={}, 
+yticklabels={}, 
+ymin=-10, ymax=10,
+xmin=-10, xmax=10,
+axis lines = center, 
+inner axis line style={Latex-Latex,very thick}, 
+grid=both,
+minor tick num=4, 
+tick align=inside} % grid without labels, origin at the center, 10 units from origin
+
+
+\newcommand{\lineplot}[7]{%\begin{center}
+		\tikzmath{\linewidth1 = #6; \linewidth2 = \linewidth1 + 0.1; \dotwidth = 20*\linewidth2; }
+		\begin{tikzpicture}[scale=#6]		
+			\draw [help lines] (-#7, -#7) grid (#7, #7);
+			\draw[line width=\linewidth1 mm, <->, >={Latex[round]}] (-#7, 0) -- (#7, 0);
+			\draw[line width=\linewidth1 mm, <->, >={Latex[round]}] (0, -#7) -- (0, #7);	
+			
+			\coordinate (a) at (#1, #2);
+			\coordinate (b) at (#3, #4);
+			
+			\fill [fill=black] (a) circle (\dotwidth pt);
+			\fill [fill=black] (b) circle (\dotwidth pt);
+			
+			\draw[line width=\linewidth2 mm, <->, >={Latex[round]}] ($(b)!#5!(a)$)  -- ($(a)!#5!(b)$);
+		\end{tikzpicture}  
+%\end{center}
+}
+
+\newcommand{\plotit}[3]{
+	\tikzmath{\linewidth1 = #2; \linewidth2 = \linewidth1 + 0.1;}
+		\begin{tikzpicture}[scale=#2, main node/.style={rectangle,font=\sffamily\bfseries}]		
+			\draw [help lines] (-#3, -#3) grid (#3, #3);
+			\draw[line width=\linewidth2 mm, <->, >={Latex[round]}] (-#3, 0) -- (#3, 0);
+			\draw[line width=\linewidth2 mm, <->, >={Latex[round]}] (0, -#3) -- (0, #3);	
+			\input{#1}
+		\end{tikzpicture}  
+}
+
+\newcommand {\commentblock}[1] {}
+
+\makeatletter
+\def\input@path{{/home/jonathan/Documents/2022-2023/latex/quizzes/}{/home/jonathan/Documents/2022-2023/latex/exams/}{/home/jonathan/Documents/others/latex/databases/}}
+%or: \def\input@path{{/path/to/folder/}{/path/to/other/folder/}}
+\makeatother
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X} %for tabularx
+
+%\newcolumntype{R}{>{\raggedleft\arraybackslash}X} %for tabularx
+
+\newcolumntype{Z}{>{\raggedleft\arraybackslash}X} %for tabularx
+
+\newcolumntype{N}[1]{>{\raggedleft}p{#1}} %for tabular left 
+
+\newcolumntype{M}[1]{>{\raggedright\arraybackslash}p{#1}} %for tabular right 
+
+\newcommand{\axisfive}{xticklabels={}, 
+yticklabels={}, 
+ymin=-5, ymax=5,
+xmin=-5, xmax=5,
+axis lines = center, 
+inner axis line style={Latex-Latex,very thick}, 
+grid=both,
+minor tick num=1, 
+tick align=inside} % grid with labels, origin at the center, 5 units from origin 
+
+
+\newcommand{\plotlinetwopointsparams}[9]{
+	\def \m {#1}
+	\def \b {#2}
+	\def \ax {#3}
+	\def \ay {#4}
+	\def \bx {#5}
+	\def \by {#6}
+	\def \anchora {#7}
+	\def \anchorb {#8}
+	\def \arrowheaddir {#9}
+}	
+ 
+\newcommand{\plotlinetwopoints}[8]{ %1 scale 2xmin 3xmax 4ymin 5ymax 6domfrom 7domto 8ticknum 
+	\begin{tikzpicture}[>=stealth, scale=#1]
+		\begin{axis}[
+			grid=both,
+			grid style={line width=.2pt, draw=gray!40},
+			major grid style={line width=.2pt,draw=gray!40},
+			xmin=#2,xmax=#3,
+			ymin=#4,ymax=#5,
+			axis x line=middle,
+			axis y line=middle,
+			inner axis line style={Latex-Latex,very thick},
+			minor tick num=#8,
+			]
+			
+			\ifthenelse{\equal{\arrowheaddir}{l}}{\def\arrowhead {<-}}{\ifthenelse{\equal{\arrowheaddir}{r}}{\def\arrowhead {->}}{\ifthenelse{\equal{\arrowheaddir}{b}}{\def\arrowhead {<->}}{\def\arrowhead {}}}}
+						
+			\addplot+[mark=*,color=red] coordinates {(\ax, \ay)} node [anchor=\anchora, inner sep=2pt] {};
+			
+			\addplot+[mark=*,color=red] coordinates {(\ax, \ay)} node [anchor=\anchora, inner sep=2pt] {$ (\ax , \ay) $};
+			
+			\addplot+[mark=*,color=blue] coordinates {(\bx, \by)} node [anchor=\anchorb, inner sep=2pt] {};
+			
+			\addplot+[mark=*,color=blue] coordinates {(\bx, \by)} node [anchor=\anchorb, inner sep=2pt] {$ (\bx , \by) $};
+			
+			\addplot+[\arrowhead, >={Latex[round]}, domain=#6:#7, samples=100, smooth, very thick, no markers,color=black] {\m*x+\b};
+		\end{axis}
+	\end{tikzpicture}
+}
+
+\newcommand{\blank}{\underline{\hspace{2em}}}
+
+\newcommand {\oneinchblank} {\underline{\hspace{1in}}}
+
+\newcommand{\plotsyslineqparamsA}[9]{
+	\def \mA {#1}
+	\def \bA {#2}
+	\def \axA {#3}
+	\def \ayA {#4}
+	\def \bxA {#5}
+	\def \byA {#6}
+	\def \anchoraA {#7}
+	\def \anchorbA {#8}
+	\def \arrowheaddirA {#9}
+}
+
+\newcommand{\plotsyslineqparamsB}[9]{
+	\def \mB {#1}
+	\def \bB {#2}
+	\def \axB {#3}
+	\def \ayB {#4}
+	\def \bxB {#5}
+	\def \byB {#6}
+	\def \anchoraB {#7}
+	\def \anchorbB {#8}
+	\def \arrowheaddirB {#9}
+}
+
+\newcommand{\plotsyslineqparamsC}[7]{
+	\def \domfromA {#1}
+	\def \domtoA {#2}
+	\def \domfromB {#3}
+	\def \domtoB {#4} 
+	\def \solx {#5}
+	\def \soly {#6} 
+	\def \solanchor {#7}
+}
+
+\newcommand{\plotsyslineq}[7]{ %1 scale 2xmin 3xmax 4ymin 5ymax 6xticknum 7yticknum
+	\begin{tikzpicture}[>=stealth, scale=#1]
+		\begin{axis}[
+			grid=both,
+			grid style={line width=.2pt, draw=gray!40},
+			major grid style={line width=.2pt,draw=gray!40},
+			xmin=#2,xmax=#3,
+			ymin=#4,ymax=#5,
+			axis x line=middle,
+			axis y line=middle,
+			inner axis line style={Latex-Latex,very thick},
+			minor x tick num=#6,
+			minor y tick num=#7,
+			]
+			
+			\ifthenelse{\equal{\arrowheaddirA}{l}}{\def\arrowheadA {<-}}{\ifthenelse{\equal{\arrowheaddirA}{r}}{\def\arrowheadA {->}}{\ifthenelse{\equal{\arrowheaddirA}{b}}{\def\arrowheadA {<->}}{\def\arrowheadA {}}}}
+			
+			\ifthenelse{\equal{\arrowheaddirB}{l}}{\def\arrowheadB {<-}}{\ifthenelse{\equal{\arrowheaddirB}{r}}{\def\arrowheadB {->}}{\ifthenelse{\equal{\arrowheaddirB}{b}}{\def\arrowheadB {<->}}{\def\arrowheadB {}}}}
+						
+			\addplot+[mark=*,color=red] coordinates {(\axA, \ayA)} node [anchor=\anchoraA, inner sep=2pt] {};
+			
+			
+			
+			\addplot+[mark=*,color=blue] coordinates {(\bxA, \byA)} node [anchor=\anchorbA, inner sep=2pt] {};
+			
+			\addplot+[\arrowheadA, >={Latex[round]}, domain=\domfromA:\domtoA, samples=100, smooth, very thick, no markers,color=black] {\mA*x+\bA};
+			
+			\addplot+[mark=*,color=teal] coordinates {(\axB, \ayB)} node [anchor=\anchoraB, inner sep=2pt] {};
+						
+			\addplot+[mark=*,color=violet] coordinates {(\bxB, \byB)} node [anchor=\anchorbB, inner sep=2pt] {};
+						
+			\addplot+[\arrowheadB, >={Latex[round]}, domain=\domfromB:\domtoB, samples=100, smooth, very thick, solid, no markers,color=black] {\mB*x+\bB};
+			
+			\addplot+[mark=*,color=red] coordinates {(\axA, \ayA)} node [anchor=\anchoraA, inner sep=2pt] {$ (\axA , \ayA) $};
+			
+			\addplot+[mark=*,color=blue] coordinates {(\bxA, \byA)} node [anchor=\anchorbA, inner sep=2pt] {$ (\bxA , \byA) $};
+			
+			\addplot+[mark=*,color=violet] coordinates {(\bxB, \byB)} node [anchor=\anchorbB, inner sep=2pt] {$ (\bxB , \byB) $};
+			
+			\addplot+[mark=*,color=teal] coordinates {(\axB, \ayB)} node [anchor=\anchoraB, inner sep=2pt] {$ (\axB , \ayB) $};
+			
+			\addplot+[mark=*,color=purple] coordinates {(\solx, \soly)} node [anchor=\solanchor, inner sep=2pt] {$ (\solx, \soly) $};
+			
+		\end{axis}
+	\end{tikzpicture}
+}
+
+\newcommand{\polyPlotPointsA}[8]{
+	\def \xA {#1}
+	\def \yA {#2}
+	\def \xB {#3}
+	\def \yB {#4}
+	\def \xC {#5}
+	\def \yC {#6}
+	\def \xD {#7}
+	\def \yD {#8}
+}
+
+\newcommand{\polyPlotPointsB}[8]{
+	\def \xE {#1}
+	\def \yE {#2}
+	\def \xF {#3}
+	\def \yF {#4}
+	\def \xG {#5}
+	\def \yG {#6}
+	\def \xH {#7}
+	\def \yH {#8}
+}
+
+\newcommand {\polyPlotPoints}[9]{
+\def \xmin {#1}
+\def \xmax {#2}
+\def \ymin {#3}
+\def \ymax {#4}
+\def \minorTickNum {#5}
+\def \domFrom {#6}
+\def \domTo {#7}
+\def \scale {#8}
+\def \factors {#9}
+\def \points {(\xA,\yA), (\xB,\yB), (\xC, \yC), (\xD, \yD), (\xE,\yE), (\xF,\yF), (\xG, \yG), (\xH, \yH)}
+
+\begin{tikzpicture}[>=stealth, scale=\scale, place/.style={circle, fill=black, inner sep=0pt, outer sep=0pt, minimum size=3pt}, 
+point-label/.style={fill=white, circle,inner sep=0pt}]
+
+\begin{axis}[
+ymin=\ymin, ymax=\ymax,
+xmin=\xmin, xmax=\xmax,
+axis lines = center, 
+inner axis line style={Latex-Latex,very thick}, 
+grid=both,
+minor tick num=\minorTickNum, 
+tick align=inside, 
+enlargelimits={abs=0.5}, 
+axis line style={latex-latex},
+xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+] 
+
+\addplot[<->, >={Latex[round]},  ultra thick, domain=\domFrom:\domTo, samples=200]{
+\factors
+}node[]{};
+
+\foreach \p in \points
+  \addplot+[mark=*,color=red] coordinates {\p} node {};
+  	
+\end{axis}
+ 
+\end{tikzpicture}
+}
+
+\newcommand {\polyPlot}[9]{
+\def \xmin {#1}
+\def \xmax {#2}
+\def \ymin {#3}
+\def \ymax {#4}
+\def \minorTickNum {#5}
+\def \domFrom {#6}
+\def \domTo {#7}
+\def \scale {#8}
+\def \factors {#9}
+
+\begin{tikzpicture}[>=stealth, scale=\scale, place/.style={circle, fill=black, inner sep=0pt, outer sep=0pt, minimum size=3pt}, 
+point-label/.style={fill=white, circle,inner sep=0pt}]
+
+\begin{axis}[
+ymin=\ymin, ymax=\ymax,
+xmin=\xmin, xmax=\xmax,
+axis lines = center, 
+inner axis line style={Latex-Latex,very thick}, 
+grid=both,
+minor tick num=\minorTickNum, 
+tick align=inside, 
+enlargelimits={abs=0.5}, 
+axis line style={latex-latex},
+xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+] 
+
+\addplot[<->, >={Latex[round]},  ultra thick, domain=\domFrom:\domTo, samples=200]{
+\factors
+}node[]{};
+\end{axis}
+ 
+\end{tikzpicture}
+}

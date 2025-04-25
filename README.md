@@ -22,4 +22,3 @@ cd DLL-Creator
 bash ./install.sh
 ```
 
-## Usage
